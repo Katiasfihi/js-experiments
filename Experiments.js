@@ -131,3 +131,71 @@ if (x === y  && y === z) {
 if (isTrue || x === z) {
     console.log (`this is an or statement`);
 }
+
+
+document.getElementById("myBtn").addEventListener("click", function(){
+    this.style.color = "red";
+});
+
+function functionWithArgs(x, y) {
+
+    functionWithArgs : functionWithArgs("hello", "salut");
+    
+    
+    console.log(functionWithArgs);
+    }
+
+    // Setup  //
+    
+var processed = 0;
+
+function processArg(num) {
+  return (num + 3) / 5;
+}
+
+processed = processArg(7)
+
+
+function nextInLine(arr, item) {
+    // Only change code below this line
+    
+  arr.push(item);
+  var item = arr.shift();
+  
+    return item;
+    
+    // Only change code above this line
+    
+  
+  }
+
+  // booleans
+
+  function trueOrFalse(wasThatTrue) {
+   
+    if (wasThatTrue) {
+      return "Yes, that was true";
+    } 
+      return "No, that was false";
+  
+  }
+
+  //For loop
+  
+  /*function hello(){
+for (i = 0; i < 5; i++ ) {
+  console.log(hello);
+  
+}
+}*/
+
+function carol(katia) {
+
+  for (i = 0; i < 5; i++ ) {
+    console.log(katia);
+    
+  }
+  }
+  
+  carol('jnm') 
+  

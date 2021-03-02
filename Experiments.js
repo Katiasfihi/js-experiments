@@ -198,4 +198,57 @@ function carol(katia) {
   }
   
   carol('jnm') 
+
+  //new function
+
+  function quickCheck(arr, elem) {  
+    if (arr.indexOf(elem) >= 0 ) {
+      return true;
+    }
+    return false;
+  }
   
+  console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+
+  // new
+
+  let nestedArray = [  ['deep'],  [ ['deeper'], ['deeper']  ],[ [ ['deepest'], ['deepest']   ], [ [  ['deepest-est?']   ]  ]  ] ];
+  
+  //NEW
+
+  function isEveryoneHere(obj) {
+    if (
+      obj.hasOwnProperty("Alan") &&
+      obj.hasOwnProperty("Jeff") &&
+      obj.hasOwnProperty("Sarah") &&
+      obj.hasOwnProperty("Ryan")
+    ) {
+      return true;
+    }
+    return false;
+  }
+
+  //Iterate Through the Keys of an Object with a for...in Statement
+
+  function countOnline(usersObj) {
+ 
+  let user = 0
+  for (let user in usersObj) {
+  if (usersObj[user].online === true) {
+    return result++
+  }
+  }
+  return result;
+  }
+
+  //factorialize
+  function factorialize(num) {
+    if (num < 0) 
+          return -1;
+    else if (num == 0) 
+        return 1;
+    else {
+        return (num * factorialize(num - 1));
+    }
+  }
+  factorialize(5);

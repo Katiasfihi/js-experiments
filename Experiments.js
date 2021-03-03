@@ -303,3 +303,40 @@ function titleCase(string) {
     return localArray;
   }
   
+  //Falsy Bouncer
+
+  function bouncer(arr) {
+
+    let newArray = []
+      
+      for (let i = 0; i <arr.length; i++) {
+        if (arr[i]) newArray.push(arr[i]); 
+          } 
+        return newArray;
+        }
+      
+    bouncer([7, "ate", "", false, 9]);
+    console.log(bouncer([7, "ate", "", false, 9]))
+
+    //
+    function bouncer(arr) {
+      return arr.filter(Boolean);
+    }
+
+    //Where do I Belong
+
+    
+function getIndexToIns(arr, num) {
+
+  const array1 = arr.length;
+  let hello = 0;
+    
+  for (let i = 0; i < array1; i++) {
+  if (num > arr[i]) {
+     hello++; 
+     }
+   }   
+   return hello;    
+  }
+  
+  getIndexToIns([40, 60], 50);

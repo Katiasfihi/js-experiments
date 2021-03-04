@@ -341,7 +341,7 @@ function getIndexToIns(arr, num) {
   
   getIndexToIns([40, 60], 50);
 
-  
+
   //
 
   function chunkArrayInGroups(arr, size) {
@@ -352,3 +352,31 @@ function getIndexToIns(arr, num) {
     }
     return newArr;
   }
+
+  // instanceOf
+
+  let Bird = function(name, color) {
+    this.name = name;
+    this.color = color;
+    this.numLegs = 2;
+  }
+  
+  let crow = new Bird("Alexis", "black");
+  
+  crow instanceof Bird;
+
+  // Functional Programming
+
+const prepareTea = () => 'greenTea';
+
+const getTea = (numOfCups) => {
+  const teaCups = [];
+
+  for(let cups = 1; cups <= numOfCups; cups += 1) {
+    const teaCup = prepareTea();
+    teaCups.push(teaCup);
+  }
+  return teaCups;
+};
+
+const tea4TeamFCC = getTea(40);

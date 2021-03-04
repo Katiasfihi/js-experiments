@@ -405,3 +405,52 @@ console.log(
   tea4GreenTeamFCC,
   tea4BlackTeamFCC
 );
+
+//hasOwnProperty
+
+function Bird(name) {
+  this.name = name;
+  this.numLegs = 2;
+}
+
+let canary = new Bird("Tweety");
+let ownProps = [];
+// Only change code below this line
+
+for (let property in canary) {
+  if(canary.hasOwnProperty(property)) {
+    ownProps.push(property)
+  }
+}
+console.log(ownProps)
+
+//
+Obj.prototype.newProperty = "New Property!";
+// Own properties are defined directly on the object instance itself. And prototype properties are defined on the prototype.
+
+//constructor
+
+let duck = new Bird();
+let beagle = new Dog();
+
+console.log(duck.constructor === Bird); 
+console.log(beagle.constructor === Dog);
+
+function joinBirdFraternity(candidate) {
+  if (candidate.constructor === Bird) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// isPrototypeOf
+
+function Dog(name) {
+  this.name = name;
+}
+
+let beagle = new Dog("Snoopy");
+
+
+Dog.prototype.isPrototypeOf(beagle);

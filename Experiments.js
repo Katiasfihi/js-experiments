@@ -490,3 +490,19 @@ Penguin.prototype.fly = function() {
 
 let penguin = new Penguin();
 console.log(penguin.fly());
+
+//closure : function that has access to a private variable
+function Bird() {
+  let hatchedEgg = 10;
+
+  this.getHatchedEggCount = function() { 
+    return hatchedEgg;
+  };
+}
+let ducky = new Bird();
+ducky.getHatchedEggCount();
+
+// Immediately Invoked Function Expression (IIFE)
+(function() {
+  console.log("A cozy nest is ready");
+})();

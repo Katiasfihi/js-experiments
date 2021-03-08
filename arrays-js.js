@@ -86,17 +86,31 @@ const oldest = inventors.sort((a,b) => a.year - a.passed > b.year - b.passed ? 1
       (item.split(' '))
       })
       
+      const lastName = people.sort((a, b) => (a < b)? -1 : 1);
+     
       
-      const lastName = people.sort(function(a, b){
+      /*const lastName = people.sort(function(a, b){
         if(a < b){
           return -1;
         } else if (a > b){
           return 1;
         }
       });
-       console.log(lastName)
+       console.log(lastName)*/
+
+      
       
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+
+    const instance = data.reduce(function(accumulator, currentValue){
+      if (!accumulator[currentValue]){ //if there is no accumulator[currentValue] then = 0;
+        accumulator[currentValue] = 0; 
+      }
+      accumulator[currentValue]++; 
+      return accumulator;
+    }, {});
+    
+    console.log(instance) 

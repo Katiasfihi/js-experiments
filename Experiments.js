@@ -506,3 +506,66 @@ ducky.getHatchedEggCount();
 (function() {
   console.log("A cozy nest is ready");
 })();
+
+//Create a sentence of the form "One for X, one for me."
+const sentence = ((name) => `one for ${name}, one for me`)
+
+//
+const time = () => {
+  const date = new Date()
+  const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  return days[date.getDay()]
+  };
+  console.log(time());
+
+  const time2 = () => {
+    const date1 = new Date()
+    return date1.toLocaleTimeString()
+    };
+    console.log(time2());
+  
+    console.log('Today is ' + time(), time2());
+
+    //
+    function hello () {
+      const date = new Date();
+      return date.toLocaleDateString();
+      }
+      
+      console.log(hello())
+
+      ////4. Write a JavaScript program to find the area of a s where lengths of the three of its sides are 5, 6, 7.
+const sides = [5, 6, 7];
+const [a, b, c] = sides;
+
+const triangle = () => {
+  const calc = (a + b + c) / 2;
+  const firstDiff = calc - a;
+  const secondDiff = calc - b;
+  const thirdDiff = calc - c;
+  const area = Math.sqrt(calc * firstDiff * secondDiff * thirdDiff);
+  return area;
+}
+console.log(triangle())
+
+//5. Write a JavaScript program to rotate the string 'w3resource' in right direction by periodically removing one letter from the end of the string and attaching it to the front. 
+const string = 'katia'
+
+function exercise (string) {
+
+  const split = string.split('')
+  console.log(split)
+
+  const copyWord = string.slice(0, string.length -1)
+  console.log(copyWord)
+
+  const lastLetter = string.slice(string.length -1, string.length)
+  console.log(lastLetter)
+  console.log(string.length -1, string.length)
+  const result = lastLetter + copyWord
+  console.log(result)
+
+  return result
+};
+
+console.log(exercise(string))

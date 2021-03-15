@@ -738,3 +738,8 @@ function init () {
 
 };
 init()
+
+//12. Write a JavaScript program to get the website URL (loading page).
+
+document.querySelector('.text').innerHTML =
+'That is the url of the page : ' + window.location.href

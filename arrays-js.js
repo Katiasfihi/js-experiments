@@ -114,3 +114,69 @@ const oldest = inventors.sort((a,b) => a.year - a.passed > b.year - b.passed ? 1
     }, {});
     
     console.log(instance) 
+
+
+//10. Write a JavaScript program to calculate multiplication and division of two numbers (input from user).
+
+  document.getElementById("app").innerHTML = `
+<h1>Hello Vanilla!</h1>
+<div class='myDiv'>
+  We use the same configuration as Parcel to bundle this sandbox, you can find more
+  info about Parcel 
+  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
+<br></br>
+<form>
+    <label for="fnumber">First number:</label><br>
+    <input type="number" class="fnumber" name="fnumber"><br>
+    <label for="snumber">Second number:</label><br>
+    <input type="numer" class="snumber" name="snumber">
+</form>
+<br></br>
+  <button class='multi'> multiply </button>
+  <button class='division'> divide </button>
+<br></br>
+  <text>The result is : </text><br>
+  <div id='log'></div>
+</div>
+`;
+
+const selectElement = document.querySelector('.fnumber');
+const selectElement2 = document.querySelector('.snumber');
+let log = document.getElementById('log');
+
+let num1 = 0
+let num2 = 0
+
+const multiply = (a, b) => {
+  console.log(num1 * num2, 'xd')
+  const result = num1 * num2
+  log.innerHTML = result
+  return result;
+}
+
+const divide = (a, b) => {
+  console.log(num1 / num2, 'jvd')
+  const result2 = num1 / num2
+  log.innerHTML = result2
+  return result2;
+}
+
+selectElement.addEventListener('change', function () {
+  log.textContent = console.log(this.value);
+  num1 = this.value;
+});
+
+selectElement2.addEventListener('change', function () {
+  log.textContent = console.log(this.value);
+  num2 = this.value;
+});
+
+function init () {
+  document.querySelector('.multi').addEventListener('click', multiply);
+};
+init()
+
+function init2 () {
+  document.querySelector('.division').addEventListener('click', divide);
+};
+init2()

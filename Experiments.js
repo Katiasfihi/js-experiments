@@ -569,3 +569,55 @@ function exercise (string) {
 };
 
 console.log(exercise(string))
+
+// Write a JavaScript program to find 1st January is being a Sunday between 2014 and 2050.  Go to the editor
+const x = '2020'
+const sunday = () => {
+  for (let year = 2014; year <= 2050; year++);
+  const day = new Date(new Date(x).getFullYear(), 0, 1);
+  const final = day.getDay();
+  if (final === 0) {
+    return true;
+  } else {
+    return false;
+  }
+  };
+  console.log(sunday())
+
+  //8. Write a JavaScript program where the program takes a random integer between 1 to 10, the user is then prompted to input a guess number. If the user input matches with guess number, the program will display a message "Good Work" otherwise display a message "Not matched".  Go to the editor
+
+const ex8 = () => {
+  for (var i = 0; i < 20; i++) {
+  const calc = 0;
+  for (let num = 1; num <= Math.floor(Math.random() * 10); num++) {
+    calc++;
+  }
+  return calc;
+  }
+}
+console.log(ex8())
+
+const integer = ((number) => number)
+console.log(integer(8))
+
+const match = () => ex8 === integer ? 'Good Work' : 'Not matched'
+
+console.log(match())
+  
+// Write a JavaScript program to calculate days left until next Christmas.  Go to the editor
+
+
+const day = new Date()
+console.log(day)
+
+const christmas = new Date('December 25, 2021')
+console.log(christmas, 'chris')
+
+const left = christmas - day
+console.log(left, 'left')
+
+let minutes = Math.floor(left / 60000);
+let hours = Math.round(minutes / 60);
+let days = Math.round(hours / 24);
+
+console.log(days, 'days')

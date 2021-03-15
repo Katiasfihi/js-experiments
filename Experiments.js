@@ -621,3 +621,120 @@ let hours = Math.round(minutes / 60);
 let days = Math.round(hours / 24);
 
 console.log(days, 'days')
+
+
+//10. Write a JavaScript program to calculate multiplication and division of two numbers (input from user).
+
+document.getElementById("app").innerHTML = `
+<h1>Hello Vanilla!</h1>
+<div class='myDiv'>
+  We use the same configuration as Parcel to bundle this sandbox, you can find more
+  info about Parcel 
+  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
+<br></br>
+<form>
+    <label for="fnumber">First number:</label><br>
+    <input type="number" class="fnumber" name="fnumber"><br>
+    <label for="snumber">Second number:</label><br>
+    <input type="numer" class="snumber" name="snumber">
+</form>
+<br></br>
+  <button class='multi'> multiply </button>
+  <button class='division'> divide </button>
+<br></br>
+  <text>The result is : </text><br>
+  <div id='log'></div>
+</div>
+`;
+
+const selectElement = document.querySelector('.fnumber');
+const selectElement2 = document.querySelector('.snumber');
+let log = document.getElementById('log');
+
+let num1 = 0
+let num2 = 0
+
+const multiply = (a, b) => {
+  console.log(num1 * num2, 'xd')
+  const result = num1 * num2
+  log.innerHTML = result
+  return result;
+}
+
+const divide = (a, b) => {
+  console.log(num1 / num2, 'jvd')
+  const result2 = num1 / num2
+  log.innerHTML = result2
+  return result2;
+}
+
+selectElement.addEventListener('change', function () {
+  log.textContent = console.log(this.value);
+  num1 = this.value;
+});
+
+selectElement2.addEventListener('change', function () {
+  log.textContent = console.log(this.value);
+  num2 = this.value;
+});
+
+function init () {
+  document.querySelector('.multi').addEventListener('click', multiply);
+};
+init()
+
+function init2 () {
+  document.querySelector('.division').addEventListener('click', divide);
+};
+init2()
+
+
+
+//11. Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit.
+
+document.getElementById("app").innerHTML = `
+<h1>Hello Vanilla!</h1>
+
+<div>
+  We use the same configuration as Parcel to bundle this sandbox, you can find more
+  info about Parcel 
+  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
+<br></br>
+<form>
+<label for='cinput'>Celcius:</label><br>
+<input type='number' id='cinput' name='cinput'><br>
+<label for='finput'>Fahrenheit:</label><br>
+<input type='number' id='finput' name='finput'>
+</form><br>
+<button class='sub'>submit</button>
+<div class='result'></div>
+</div>
+`;
+
+
+const firstElement = document.querySelector('#cinput')
+const secondElement = document.querySelector('#finput')
+const text = document.querySelector('.result')
+let x = 0
+
+function conversion () {
+  x = parseFloat(x);
+  const total = ((x*9)/5)+32 ;
+  text.innerHTML = total
+  return total;
+  }
+
+firstElement.addEventListener('change', function () {
+  text.textContent = console.log(this.value); 
+  x = this.value 
+});
+
+secondElement.addEventListener('change', function () {
+  text.textContent = console.log(this.value);
+});
+
+function init () {
+ document.querySelector('.sub').addEventListener('click', conversion);
+
+};
+init()

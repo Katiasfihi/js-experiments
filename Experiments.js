@@ -786,3 +786,35 @@ const diff = ((b) => ( b < a ) ? a - b : (b - a ) * 3)
 //18. Write a JavaScript program to check two given numbers and return true if one of the number is 50 or if their sum is 50.
 
 const numbers = ((a, b) => a + b === 50 || a === 50 || b === 50 ? true : false )
+
+//19. Write a JavaScript program to check whether a given integer is within 20 of 100 or 400. 
+
+const number = (a) => {
+  return (100 - a <= 20) || (400 - a <= 20)  
+  }
+
+  //20. Write a JavaScript program to check from two given integers, whether one is positive and another one is negative.
+
+const num = (a, b) => {
+  if ((a < 0 && b > 0) || (a > 0 && b < 0)) {
+    return true;
+  } else {
+    return false
+  }
+}
+
+//21. Write a JavaScript program to create a new string adding "Py" in front of a given string. If the given string begins with "Py" then return the original string.
+
+
+const one = 'hello ';
+const str = 'py'
+
+
+const three = (one) => {
+ const four = str + one;
+ if ((one[0] === 'p') && (one[1] === 'y')) {
+   return one;
+} else {
+  return four;
+}}
+console.log(three(one))

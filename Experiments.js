@@ -743,3 +743,46 @@ init()
 
 document.querySelector('.text').innerHTML =
 'That is the url of the page : ' + window.location.href
+
+//Write a JavaScript exercise to get the extension of a filename. 
+
+function hello (){
+  const firstOne = document.querySelector('#file1').value
+  const extension = firstOne.split('.').pop()
+  document.querySelector('.file').textContent = extension
+  }
+  hello()
+ 
+  function bonjour () {
+  document.querySelector('#ext').addEventListener('click', hello)
+  }
+  bonjour()
+  
+  //15. Write a JavaScript program to get the difference between a given number and 13, if the number is greater than 13 return double the absolute difference. 
+
+let b = 13
+
+const diff = (a) => {
+  if (b > a) {
+  return b - a 
+} else {
+  return (b - a) * 2
+}}
+
+ console.log(diff(14))
+
+ //16. Write a JavaScript program to compute the sum of the two given integers. If the two values are same, then returns triple their sum.  Go to the editor
+
+const sum = ((a, b) => (!a === b) ? a + b :(a + b) * 3)
+  
+
+//17. Write a JavaScript program to compute the absolute difference between a specified number and 19. Returns triple their absolute difference if the specified number is greater than 19. 
+
+let a = 19;
+
+const diff = ((b) => ( b < a ) ? a - b : (b - a ) * 3)
+
+
+//18. Write a JavaScript program to check two given numbers and return true if one of the number is 50 or if their sum is 50.
+
+const numbers = ((a, b) => a + b === 50 || a === 50 || b === 50 ? true : false )

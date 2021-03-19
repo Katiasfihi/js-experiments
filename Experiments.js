@@ -830,4 +830,20 @@ function copyArrayAndManipulate(array, instructions) {
 function multiplyBy2(input) { return input * 2}
 const result = copyArrayAndManipulate([1, 2, 3], multiplyBy2)
 
-//
+
+//Create a function limitedRepeat that console logs hi for now every second, but only for 5 seconds. Research how to use clearInterval if you are not sure how to do this.
+
+function limitedRepeat() {
+  function print() {
+    console.log('hi again');
+  }
+  function clear() {
+  clearInterval(id);
+  }
+    
+  const id = setInterval(print, 1000);
+  setTimeout(clear, 5000)
+ 
+}
+
+limitedRepeat()

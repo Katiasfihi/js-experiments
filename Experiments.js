@@ -917,3 +917,43 @@ function hello(num) {
 }
 
 console.log(myString('katia'))
+
+
+//Write a JavaScript program to check whether a string starts with 'Java' and false otherwise
+
+function myFunction(str) {
+  if (str[0] === 'j' && str[1] === 'a' && str[2] === 'v' && str[3] === 'a')
+    {
+      return true
+    }
+  else {
+    return false
+  }
+  
+}
+
+console.log(myFunction('javakatia'))
+
+//28. Write a JavaScript program to check whether two given integer values are in the range 50..99 (inclusive). Return true if either of them are in the said range. 
+
+function myFunction(num, numm) {
+  if ((num >= 50 && num <= 99) || (numm >= 50 && numm <= 99)) {
+    return true
+  } else {
+    return false
+  }
+}
+
+console.log(myFunction(20, 58))
+
+//29. Write a JavaScript program to check whether three given integer values are in the range 50..99 (inclusive). Return true if one or more of them are in the said range.  
+
+function myFunction(num, numm, nummm) {
+  if ((num >= 50 && num <= 99) || (numm >= 50 && numm <= 99) || (nummm >= 50 && nummm <= 99)) {
+    return true
+  } else {
+    return false
+  }
+}
+
+console.log(myFunction(20, 58, 98))

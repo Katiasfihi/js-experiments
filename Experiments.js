@@ -847,3 +847,15 @@ function limitedRepeat() {
 }
 
 limitedRepeat()
+
+//22. Write a JavaScript program to remove a character at the specified position of a given string and return the new string. 
+const hello = ((str, index) => {
+  const x = str.substring(0, index)
+
+  const y = str.substring(index + 1 , str.length)
+  
+  return (x + y)
+})
+
+console.log(hello('katia', 2))
+

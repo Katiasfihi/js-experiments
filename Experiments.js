@@ -859,3 +859,61 @@ const hello = ((str, index) => {
 
 console.log(hello('katia', 2))
 
+//23. Write a JavaScript program to create a new string from a given string changing the position of first and last characters. The string length must be greater than or equal to 1
+
+
+function myFunction(str) {
+  if (str.length <= 1) 
+  { 
+    return str
+  }  
+    const x = str.substring(0, 1);
+    const y = str.substring(1, str.length - 1)
+    const z = str.substring(str.length - 1, str.length)
+
+  return z + y + x
+  
+};
+console.log(myFunction('bonjourkatia'))
+
+//24. Write a JavaScript program to create a new string from a given string with the first character of the given string added at the front and back. 
+
+
+function string(str) {
+  
+  const x = str.substring(0, 1)
+  return x + str + x
+  
+}
+console.log(string('katia'))
+
+//25. Write a JavaScript program to check whether a given positive number is a multiple of 3 or a multiple of 7.
+
+function hello(num) {
+
+  if (num % 3 === 0 || num % 7 === 0)
+    {
+      return true
+    }
+   else {
+     return false
+   }
+ };
+ 
+ console.log(hello(3))
+
+ //26. Write a JavaScript program to create a new string from a given string taking the last 3 characters and added at both the front and back. The string length must be 3 or more. 
+
+ function myString(str) {
+  
+  if ( str.length <= 3) {
+    return str
+  }
+  
+  const x = str.substring(str.length, str.length - 3)
+  
+  return x + str + x
+  
+}
+
+console.log(myString('katia'))

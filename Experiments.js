@@ -957,3 +957,37 @@ function myFunction(num, numm, nummm) {
 }
 
 console.log(myFunction(20, 58, 98))
+
+// Write a JavaScript program to find the largest of three given integers.
+
+const hello = (num1, num2, num3) => {
+  if ((num1 > num2) && (num1 > num3)) {
+    return num1
+  } else 
+    if ((num2 > num1) && (num2 > num3)) {
+      return num2
+  } else 
+    if ((num3 > num1) && (num3 > num2)) {
+      return num3
+    }
+}
+
+console.log(hello(-2, -10, 6))
+//or
+const hello = (num1, num2, num3) => {
+  
+  return Math.max(num1, num2, num3)
+}
+
+// 32. Write a JavaScript program to find a value which is nearest to 100 from two different given integer values.
+
+
+const hello = (num1, num2) => {
+  const x = num1 - 100
+  const y = num2 - 100
+  if(x > y) {
+    return num2
+  }
+ }
+ 
+ console.log(hello(250,65))

@@ -991,3 +991,51 @@ const hello = (num1, num2) => {
  }
  
  console.log(hello(250,65))
+
+ //30. Write a JavaScript program to filter out the element(s) of a given array, that have one of the specified values.
+
+const arr = [1, 2, 3, 4]
+
+
+  const hello = (x) => {
+    arr.filter(number => number !== x)
+  }
+
+console.log(hello(6))
+
+//31. Write a JavaScript program to find all elements in a given array except for the first one. Return the whole array if the array's length is 1.
+
+const arr = [1, 2, 3, 4]
+
+const hello = () => {
+  if (arr > 1);
+ return arr.slice(1, arr.length)
+}
+
+console.log(hello())
+
+//33. Write a JavaScript program to get a random number in the specified range.
+
+const hello = (x) => {
+return Math.floor(Math.random() * x)
+}
+
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+//35. Write a JavaScript program to get an array of given n random integers in the specified range.
+
+const hello = []
+
+function getRndInteger(min, max) {
+
+  for (let i=0; i<3; i++) {
+  const y = Math.floor(Math.random() * (max - min) ) + min;
+  hello.push(y)
+    
+  }
+  return hello
+}
+
+console.log(getRndInteger(3,600))

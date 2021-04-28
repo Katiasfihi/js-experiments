@@ -1039,3 +1039,17 @@ function getRndInteger(min, max) {
 }
 
 console.log(getRndInteger(3,600))
+
+//Write a JavaScript program to get a sorted array of objects ordered by properties and orders.
+
+const data = [
+  {name: 'katia',lastname: 'sfihi', job: 20},
+  {name: 'vatia',lastname: 'sfihi', job: 23},
+  {name: 'catia',lastname: 'sfihi', job: 2}
+  ]
+
+
+
+const hello = data.sort((a,b) => (a.job>b.job)? 1 : -1)
+
+console.log(hello)

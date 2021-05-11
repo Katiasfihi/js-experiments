@@ -1053,3 +1053,86 @@ const data = [
 const hello = data.sort((a,b) => (a.job>b.job)? 1 : -1)
 
 console.log(hello)
+
+// Write a JavaScript program to check whether the last digit of the three given positive integers is same. 
+
+
+const sameIntegers = (x, y, z) => {
+if (x && y && z > 0) {
+console.log(y % 50)
+return (x % 10 === y % 10 && x % 10 === z % 10 && y % 10 === z % 10)
+
+
+} else {
+return false
+}
+}
+
+console.log(sameIntegers(23, 3, 13))
+
+//37. Write a JavaScript program to create new string with first 3 characters are in lower case from a given string. If the string length is less than 3 convert all the characters in upper case. 
+
+
+const str = (x) => {
+  x.split('')
+  if (x.length < 3) {
+    return x.toUpperCase()
+    } else if (x.length > 3) {
+    return x.slice(0, 3) + x.slice(3, x.length).toUpperCase()
+    }
+  }
+  
+  console.log(str('he'))
+
+//console logs the numbers from 1 to n, where n is the integer the function takes as its parameter
+//logs fizz instead of the number for multiples of 3
+//logs buzz instead of the number for multiples of 5
+//logs fizzbuzz for numbers that are multiples of both 3 and 5
+
+const fizz = (n) => {
+  for (let i = 0; i < n ; i++) {
+    if (i % 3 === 0) {
+      console.log('fizz')
+    } else if (i % 5 === 0) {
+      console.log('buzz')
+    }  else if (i % 5 === 0 && i % 3 === 0) {
+      console.log('fizzbuzz')
+    } else {
+      console.log(i)
+    }
+  }
+}
+
+console.log(fizz(9))
+
+//anagram('finder', 'Friend')  --> true
+
+const anagram = (a, b) => {
+  const first = a.toLowerCase().split('').sort().join('')
+  const second = b.toLowerCase().split('').sort().join('')
+  if (first === second) {
+    return true
+  } else {
+    return false
+  }
+ }
+ 
+ console.log(anagram('1452', '4521'))
+
+ //findVowels('hello') // --> 2
+//findVowels('why') // --> 0
+
+const findVowels = str => {
+
+  const vowels = ['a', 'e', 'i', 'o', 'u']
+  let count = 0
+  
+  for (let char of str.toLowerCase()) {
+    if (vowels.includes(char)) {
+      count ++
+    }
+  }
+  return count
+  }
+
+  console.log(findVowels('hello'))
